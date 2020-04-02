@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BlogApplication<hmily-blog>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "org.hmily.blog.BlogApplication",
+            "projectName": "hmily-blog",
+            "args": ""
+        }
+    ]
+}
