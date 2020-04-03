@@ -87,18 +87,18 @@ public class CodeGenerator {
         String modelPackage = modelName.toLowerCase();
 
         JavaModelGeneratorConfiguration javaModelGeneratorConfiguration = new JavaModelGeneratorConfiguration();
-        javaModelGeneratorConfiguration.setTargetProject(PROJECT_PATH + JAVA_PATH);
-        javaModelGeneratorConfiguration.setTargetPackage(Constant.MODEL_PACKAGE + modelPackage);
+        javaModelGeneratorConfiguration.setTargetProject(PROJECT_PATH + JAVA_PATH + "/" +modelPackage);
+        javaModelGeneratorConfiguration.setTargetPackage(Constant.MODEL_PACKAGE + "." + modelPackage);
         context.setJavaModelGeneratorConfiguration(javaModelGeneratorConfiguration);
 
         SqlMapGeneratorConfiguration sqlMapGeneratorConfiguration = new SqlMapGeneratorConfiguration();
-        sqlMapGeneratorConfiguration.setTargetProject(PROJECT_PATH + RESOURCES_PATH + modelPackage);
-        sqlMapGeneratorConfiguration.setTargetPackage("mapper");
+        sqlMapGeneratorConfiguration.setTargetProject(PROJECT_PATH + RESOURCES_PATH + "/" +modelPackage);
+        sqlMapGeneratorConfiguration.setTargetPackage(Constant.MAPPER_PACKAGE + "." + modelPackage);
         context.setSqlMapGeneratorConfiguration(sqlMapGeneratorConfiguration);
 
         JavaClientGeneratorConfiguration javaClientGeneratorConfiguration = new JavaClientGeneratorConfiguration();
         javaClientGeneratorConfiguration.setTargetProject(PROJECT_PATH + JAVA_PATH + modelPackage);
-        javaClientGeneratorConfiguration.setTargetPackage(Constant.MAPPER_PACKAGE);
+        javaClientGeneratorConfiguration.setTargetPackage("mapper." + modelPackage);
         javaClientGeneratorConfiguration.setConfigurationType("XMLMAPPER");
         context.setJavaClientGeneratorConfiguration(javaClientGeneratorConfiguration);
 
