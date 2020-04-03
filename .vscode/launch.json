@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CodeGenerator",
+            "request": "launch",
+            "mainClass": "org.hmily.blog.CodeGenerator",
+            "projectName": "hmily-blog"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CodeGenerator",
+            "request": "launch",
+            "mainClass": "org.hmily.blog.test.CodeGenerator",
+            "projectName": "hmily-blog"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-BlogApplication<hmily-blog>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
