@@ -8,15 +8,16 @@ public class User {
      * 主键
      */
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private Long id;
 
     /**
-     * 姓名
+     * 名称
      */
     private String name;
 
     /**
-     * 邮箱
+     * 电子邮箱
      */
     private String email;
 
@@ -27,7 +28,7 @@ public class User {
     private String userName;
 
     /**
-     * 密码
+     * 登录密码
      */
     @Column(name = "pass_word")
     private String passWord;
@@ -80,36 +81,36 @@ public class User {
     }
 
     /**
-     * 获取姓名
+     * 获取名称
      *
-     * @return name - 姓名
+     * @return name - 名称
      */
     public String getName() {
         return name;
     }
 
     /**
-     * 设置姓名
+     * 设置名称
      *
-     * @param name 姓名
+     * @param name 名称
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * 获取邮箱
+     * 获取电子邮箱
      *
-     * @return email - 邮箱
+     * @return email - 电子邮箱
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * 设置邮箱
+     * 设置电子邮箱
      *
-     * @param email 邮箱
+     * @param email 电子邮箱
      */
     public void setEmail(String email) {
         this.email = email;
@@ -134,18 +135,18 @@ public class User {
     }
 
     /**
-     * 获取密码
+     * 获取登录密码
      *
-     * @return pass_word - 密码
+     * @return pass_word - 登录密码
      */
     public String getPassWord() {
         return passWord;
     }
 
     /**
-     * 设置密码
+     * 设置登录密码
      *
-     * @param passWord 密码
+     * @param passWord 登录密码
      */
     public void setPassWord(String passWord) {
         this.passWord = passWord;

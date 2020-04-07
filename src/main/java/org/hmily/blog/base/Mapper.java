@@ -1,4 +1,4 @@
-package org.hmily.blog.mapper;
+package org.hmily.blog.base;
 
 import tk.mybatis.mapper.common.BaseMapper;
 import tk.mybatis.mapper.common.ConditionMapper;

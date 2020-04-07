@@ -2,7 +2,7 @@ package org.hmily.blog.service;
 
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.hmily.blog.domain.ServiceException;
-import org.hmily.blog.mapper.Mapper;
+import org.hmily.blog.base.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Condition;
 

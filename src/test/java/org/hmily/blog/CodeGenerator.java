@@ -87,18 +87,18 @@ public class CodeGenerator {
         String modelPackage = modelName.toLowerCase();
 
         JavaModelGeneratorConfiguration javaModelGeneratorConfiguration = new JavaModelGeneratorConfiguration();
-        javaModelGeneratorConfiguration.setTargetProject(PROJECT_PATH + JAVA_PATH + "/" +modelPackage);
+        javaModelGeneratorConfiguration.setTargetProject(PROJECT_PATH + JAVA_PATH);
         javaModelGeneratorConfiguration.setTargetPackage(Constant.MODEL_PACKAGE + "." + modelPackage);
         context.setJavaModelGeneratorConfiguration(javaModelGeneratorConfiguration);
 
         SqlMapGeneratorConfiguration sqlMapGeneratorConfiguration = new SqlMapGeneratorConfiguration();
-        sqlMapGeneratorConfiguration.setTargetProject(PROJECT_PATH + RESOURCES_PATH + "/" +modelPackage);
-        sqlMapGeneratorConfiguration.setTargetPackage(Constant.MAPPER_PACKAGE + "." + modelPackage);
+        sqlMapGeneratorConfiguration.setTargetProject(PROJECT_PATH + RESOURCES_PATH);
+        sqlMapGeneratorConfiguration.setTargetPackage("mapper." + modelPackage);
         context.setSqlMapGeneratorConfiguration(sqlMapGeneratorConfiguration);
 
         JavaClientGeneratorConfiguration javaClientGeneratorConfiguration = new JavaClientGeneratorConfiguration();
-        javaClientGeneratorConfiguration.setTargetProject(PROJECT_PATH + JAVA_PATH + modelPackage);
-        javaClientGeneratorConfiguration.setTargetPackage("mapper." + modelPackage);
+        javaClientGeneratorConfiguration.setTargetProject(PROJECT_PATH + JAVA_PATH);
+        javaClientGeneratorConfiguration.setTargetPackage(Constant.MAPPER_PACKAGE + "." + modelPackage);
         javaClientGeneratorConfiguration.setConfigurationType("XMLMAPPER");
         context.setJavaClientGeneratorConfiguration(javaClientGeneratorConfiguration);
 
@@ -156,7 +156,8 @@ public class CodeGenerator {
                     new FileWriter(file));
             System.out.println(modelNameUpperCamel + "Service.java 生成成功");
 
-            File file1 = new File(PROJECT_PATH + JAVA_PATH + PACKAGE_PATH_SERVICE_IMPL + modelPackage + "/" + modelNameUpperCamel + "ServiceImpl.java");
+            File file1 = new File(PROJECT_PATH + JAVA_PATH + PACKAGE_PATH_SERVICE_IMPL +
+                    modelPackage + "/" + modelNameUpperCamel + "ServiceImpl.java");
             if (!file1.getParentFile().exists()) {
                 file1.getParentFile().mkdirs();
             }
